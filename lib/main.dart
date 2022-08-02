@@ -33,9 +33,8 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(
-        child: Column(children: <Widget>[Image.asset('asset/images/image1.jpg')]),
-      ),
-    );
+        body: Column(
+      children: [Image.asset("assets/images/image1.png")],
+    ),);
   }
 }
