@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:circle_nav_bar/circle_nav_bar.dart';
-import 'package:rolling_bottom_bar/rolling_bottom_bar.dart';
-import 'package:rolling_bottom_bar/rolling_bottom_bar_item.dart';
+import 'package:flutter_application_1/ListOfLittleCardes.dart';
+import 'package:flutter_application_1/ListOfBigCardes.dart';
+
+
 
 void main() {
   runApp(const MyApp());
@@ -93,6 +95,50 @@ class _MyHomePageState extends State<MyHomePage> {
                 topLeft: Radius.circular(20),
               ),
               color: Colors.orange),
+          child: Column(
+            // crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: <Widget>[
+              Expanded(
+                flex: 1,
+                child: Container(),
+              ),
+              Expanded(
+                flex: 2,
+                child: Container(
+                  color: Colors.blueAccent,
+                  child: TextField(
+                    onChanged: (value) {
+                      setState(() {});
+                    },
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 2,
+                child: SizedBox(
+                  height: 80.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: List.generate(20, (int index) {
+                      return Return_little_cards(Index: index);
+                    }),
+                  ),
+                ),
+              ),
+              Expanded(
+                flex: 5,
+                child: SizedBox(
+                  height: 80.0,
+                  child: ListView(
+                    scrollDirection: Axis.horizontal,
+                    children: List.generate(20, (int index) {
+                      return Return_big_cards(Index: index);
+                    }),
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ]),
       bottomNavigationBar: CircleNavBar(
