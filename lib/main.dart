@@ -35,10 +35,66 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
+    var size = MediaQuery.of(context).size;
+    var height = size.height;
+    var width = size.width;
+    // Image.asset("assets/images/image1.png",height: 400,)
     return Scaffold(
-      body: Column(
-        children: [Image.asset("assets/images/image1.png")],
-      ),
+      body: Stack(children: [
+        Container(
+          decoration: const BoxDecoration(
+              image: DecorationImage(
+                  image: AssetImage("assets/images/image1.png"),
+                  fit: BoxFit.fill)),
+          height: 3 * height / 5,
+          width: width,
+        ),
+        Container(
+          margin: EdgeInsets.only(
+              top: height * .33,
+              bottom: height * .48,
+              left: width / 2,
+              right: width * .02),
+          decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              color: Colors.red),
+        ),
+        Container(
+          margin: EdgeInsets.only(
+              top: height * .44,
+              bottom: height * .37,
+              left: width * .81,
+              right: width * .02),
+          decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              color: Colors.lightBlue),
+          child: const Center(
+            child: Icon(
+              Icons.location_on_outlined,
+              size: 40,
+            ),
+          ),
+        ),
+        Container(
+          margin: EdgeInsets.only(
+              top: height * .44,
+              bottom: height * .37,
+              left: width * .30,
+              right: width * .22),
+          decoration: const BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(30)),
+              color: Colors.green),
+        ),
+        Container(
+          margin: EdgeInsets.only(top: height * .56),
+          decoration: const BoxDecoration(
+              borderRadius: BorderRadius.only(
+                topRight: Radius.circular(20),
+                topLeft: Radius.circular(20),
+              ),
+              color: Colors.orange),
+        ),
+      ]),
       bottomNavigationBar: CircleNavBar(
         activeIcons: const [
           Icon(Icons.person),
