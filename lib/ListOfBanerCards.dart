@@ -19,7 +19,7 @@ class _Return_Baner_cards extends State<Return_Baner_cards> {
       child: Card(
         shadowColor: Colors.black,
         elevation: 8,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.all(Radius.circular(15))),
         color: Colors.white,
         child: Container(
@@ -29,10 +29,94 @@ class _Return_Baner_cards extends State<Return_Baner_cards> {
             children: [
               Expanded(
                   flex: 6,
-                  child: Container(
-                    color: Colors.red,
+                  child: Column(
+                    children: [
+                      Expanded(
+                          child: Container(
+                        margin: const EdgeInsets.only(
+                            top: 15, bottom: 10, left: 30, right: 30),
+                        // color: Colors.green,
+                        decoration: const BoxDecoration(
+                            borderRadius: BorderRadius.all(Radius.circular(5)),
+                            color: Color.fromARGB(255, 156, 223, 159)),
+                        child: const Align(
+                          alignment: Alignment.center,
+                          child: Text(
+                            '(رای ۱۲) ۵,۴.۳',
+                            style: TextStyle(fontSize: 10),
+                          ),
+                        ),
+                      )),
+                      Expanded(
+                          child: Container(
+                        child: Container(
+                          margin:
+                              EdgeInsets.only(left: 30, right: 30, bottom: 15),
+                          child: Row(
+                            // ignore: prefer_const_literals_to_create_immutables
+                            children: [
+                              const Expanded(
+                                  child: Align(
+                                alignment: Alignment.center,
+                                child: Icon(Icons.location_on_outlined,
+                                    color: Color.fromARGB(255, 68, 128, 177)),
+                              )),
+                              const Expanded(
+                                  child: Align(
+                                alignment: Alignment.center,
+                                child: Icon(
+                                  Icons.call,
+                                  color: Color.fromARGB(255, 68, 128, 177),
+                                ),
+                              )),
+                            ],
+                          ),
+                        ),
+                      ))
+                    ],
                   )),
-              Expanded(flex: 4, child: Container(color: Colors.green)),
+              Expanded(
+                  flex: 4,
+                  child: Container(
+                    // color: Colors.green,
+                    child: Column(children: [
+                      Expanded(
+                          child: Container(
+                        // margin: EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(right: 5, top: 10),
+                        // color: Colors.blue,
+                        child: const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text('ماهر',
+                              style: TextStyle(fontWeight: FontWeight.bold)),
+                        ),
+                      )),
+                      Expanded(
+                          child: Container(
+                        // margin: EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(right: 5),
+                        // color: Colors.blue,
+                        child: const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'تنظیم موتور',
+                          ),
+                        ),
+                      )),
+                      Expanded(
+                          child: Container(
+                        // margin: EdgeInsets.only(right: 20),
+                        padding: const EdgeInsets.only(right: 5, bottom: 10),
+                        // color: Colors.blue,
+                        child: const Align(
+                          alignment: Alignment.centerRight,
+                          child: Text(
+                            'خیابان مطهری',
+                          ),
+                        ),
+                      ))
+                    ]),
+                  )),
               Expanded(
                   flex: 4,
                   child: Container(
