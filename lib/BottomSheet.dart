@@ -37,7 +37,7 @@ class _Show_Bottom_SheetState extends State<Show_Bottom_Sheet> {
         onClosing: () {},
         builder: (context) {
           return Container(
-            height: 2 * widget.height / 5,
+            height: 256,
             child: Column(
               children: [
                 Expanded(

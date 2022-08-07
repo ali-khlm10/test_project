@@ -15,7 +15,7 @@ class _BodyState extends State<Body> {
   Widget build(BuildContext context) {
     return Image.asset(
       'assets/images/image1.png',
-      height: 3 * widget.height / 5,
+      height: widget.height - 250,
       fit: BoxFit.fill,
     );
   }

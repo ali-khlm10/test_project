@@ -16,6 +16,7 @@ class _MyHomePageState extends State<MyHomePage> {
     var size = MediaQuery.of(context).size;
     var height = size.height;
     var width = size.width;
+    print("height = ${2 * height / 3}");
     return Scaffold(
       body: Body(height: height, width: width),
       bottomSheet: Show_Bottom_Sheet(
