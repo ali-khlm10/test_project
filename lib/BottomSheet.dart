@@ -134,7 +134,10 @@ class _Show_Bottom_SheetState extends State<Show_Bottom_Sheet> {
                     scrollDirection: Axis.horizontal,
                     itemCount: 10,
                     itemBuilder: (BuildContext context, int index) {
-                      return Return_Baner_cards();
+                      return Return_Baner_cards(
+                        height: widget.height,
+                        width: widget.width,
+                      );
                     },
                   ),
                 ),

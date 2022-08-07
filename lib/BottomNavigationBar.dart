@@ -44,7 +44,7 @@ class _Show_Bottom_NavigationBarState extends State<Show_Bottom_NavigationBar> {
       color: Colors.white,
       height: 60,
       circleWidth: 60,
-      initIndex: 1,
+      initIndex: 2,
       onChanged: (v) {},
       shadowColor: Colors.black,
       elevation: 2,

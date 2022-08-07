@@ -3,8 +3,12 @@
 import 'package:flutter/material.dart';
 
 class Return_Baner_cards extends StatefulWidget {
+  final double height;
+  final double width;
   const Return_Baner_cards({
     Key? key,
+    required this.height,
+    required this.width,
   }) : super(key: key);
 
   @override
@@ -23,8 +27,8 @@ class _Return_Baner_cards extends State<Return_Baner_cards> {
             borderRadius: BorderRadius.all(Radius.circular(15))),
         color: Colors.white,
         child: Container(
-          width: 300.0,
-          height: 50.0,
+          width: 5 * widget.width / 6,
+          height: 2 * widget.height / 10,
           child: Row(
             children: [
               Expanded(
@@ -42,8 +46,11 @@ class _Return_Baner_cards extends State<Return_Baner_cards> {
                         child: const Align(
                           alignment: Alignment.center,
                           child: Text(
-                            '(رای ۱۲) ۵,۴.۳',
-                            style: TextStyle(fontSize: 10),
+                            '۴.۳ ,۵ (۱۲ رای)',
+                            style: TextStyle(
+                              fontSize: 10,
+                            ),
+                            textDirection: TextDirection.rtl,
                           ),
                         ),
                       )),
