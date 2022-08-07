@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Body.dart';
 import 'package:flutter_application_1/BottomSheet.dart';
 import 'package:flutter_application_1/BottomNavigationBar.dart';
+import 'package:flutter_application_1/FloatingActionButton.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -22,6 +23,7 @@ class _MyHomePageState extends State<MyHomePage> {
         width: width,
       ),
       bottomNavigationBar: const Show_Bottom_NavigationBar(),
+      floatingActionButton: const Float_action_buttons(),
     );
   }
 }
